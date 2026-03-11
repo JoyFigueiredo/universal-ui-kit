@@ -1,0 +1,25 @@
+<div class="project">
+    <div class="project-heart">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+    <img [src]="image" class="project-image" [alt]="title" />
+
+    <h3 class="project-title">
+        {{ title }}
+    </h3>
+    <span class="project-description">
+        {{ description }}
+    </span>
+    <div class="projet-rate">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <span>(500+)</span>
+    </div>
+    <div>
+        <ui-button label="Ver Projeto" variant="primary" (action)="verProjeto()">
+        </ui-button>
+    </div>
+</div>

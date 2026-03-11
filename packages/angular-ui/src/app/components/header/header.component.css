@@ -20,6 +20,11 @@ header {
   gap: 5px;
 }
 
+.logo-text {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+}
+
 .logo img {
   height: 50px;
   width: auto;

@@ -1,17 +1,28 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../../components/button/button.component';
 import { SocialMediaComponent } from '../../components/social-media/social-media.component';
+import { ProjectService } from '../../services/project';
+import { ProjectComponent } from '../project/project.component';
+import { Project } from '../../models/project.model';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ButtonComponent, SocialMediaComponent  ],
+  imports: [ButtonComponent, CommonModule, SocialMediaComponent, ProjectComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
 
-    saibaMais() {
+  projects: Project[] = [];
+
+  constructor(private projectService: ProjectService) {
+    this.projects = this.projectService.getProjects();
+  }
+
+  saibaMais() {
     console.log("Saiba mais clicado");
   }
 
@@ -22,4 +33,5 @@ export class HomeComponent {
   enviarEmail() {
     window.location.href = "mailto:joicebfigueiredo@gmail.com";
   }
+
 }
