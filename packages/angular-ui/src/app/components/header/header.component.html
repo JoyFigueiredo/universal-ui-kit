@@ -1,0 +1,28 @@
+<header class="navbar">
+    <div class="logo">
+        <img src="images/Rosa.png" alt="Logo">
+        <span>Universal UI</span>
+
+    </div>
+
+    <nav class="nav-links" [class.show-mobile-menu]="isMenuOpen">
+        <li class="nav-item active"> 
+            <a routerLink="/home" (click)="toggleMenu()">Home</a>
+        </li>
+        <li class="nav-item ">
+            <a routerLink="/about" (click)="toggleMenu()">About</a>
+        </li>
+        <li class="nav-item">    
+            <a routerLink="/contact" (click)="toggleMenu()">Contact</a>
+        </li>
+    </nav>
+
+    <!-- Ícone Hamburger (Mobile) -->
+    <button class="hamburger" (click)="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 24 24">
+            <path
+                d="M 4.25 3 A 1.250125 1.250125 0 1 0 4.25 5.5 L 19.75 5.5 A 1.250125 1.250125 0 1 0 19.75 3 L 4.25 3 z M 4.25 11 A 1.250125 1.250125 0 1 0 4.25 13.5 L 19.75 13.5 A 1.250125 1.250125 0 1 0 19.75 11 L 4.25 11 z M 4.25 18.5 A 1.250125 1.250125 0 1 0 4.25 21 L 19.75 21 A 1.250125 1.250125 0 1 0 19.75 18.5 L 4.25 18.5 z">
+            </path>
+        </svg>
+    </button>
+</header>

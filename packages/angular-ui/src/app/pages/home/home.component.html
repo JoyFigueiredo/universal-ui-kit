@@ -1,0 +1,33 @@
+<main id="content">
+    <section id="home">
+        <div id="cta">
+            <h1 class="title">
+                Olá, seja bem-vindo ao
+                <span>Universal UI!</span>
+            </h1>
+            <p class="description">
+                O Universal UI é um kit de interface do usuário projetado para fornecer uma experiência consistente e
+                intuitiva em todas as plataformas. Com uma ampla variedade de componentes personalizáveis, o Universal
+                UI permite que os desenvolvedores criem interfaces modernas e responsivas de forma rápida e eficiente.
+                Seja para aplicativos web, móveis ou desktop, o Universal UI é a escolha ideal para criar experiências
+                de usuário excepcionais.
+            </p>
+
+            <div id="cta_buttons">
+
+                <ui-button label="Saiba Mais" variant="secondary" (action)="saibaMais()">
+                </ui-button>
+
+                <ui-button label="Contato" variant="secondary" icon="fa-solid fa-envelope" (action)="enviarEmail()">
+                </ui-button>
+
+            </div>
+
+            <ui-social-media></ui-social-media>
+
+        </div>
+        <div class="banner">
+            <img src="images/joice.png" alt="Banner do Universal UI" />
+        </div>
+    </section>
+</main>

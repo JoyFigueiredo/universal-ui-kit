@@ -1,0 +1,8 @@
+{
+  "name": "universal-ui-kit",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ]
+}
