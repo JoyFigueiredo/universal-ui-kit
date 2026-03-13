@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './social-media.component.html',
-  styleUrl: './social-media.component.css',
+  styleUrls: ['./social-media.component.css'],
 })
 export class SocialMediaComponent {}

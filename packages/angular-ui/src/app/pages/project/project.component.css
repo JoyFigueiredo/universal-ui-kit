@@ -1,15 +1,31 @@
 .project {
     position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+
     border-radius: 20px;
     gap: 18px;
-    padding: 20px;
+    padding: 15px;
+
     background-color: #ffffff;
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+}
+
 
 .project-heart{
     position: absolute;
@@ -23,4 +39,24 @@
     height: 35px;
     right: 0px;
     top: 0px;
+    border-radius: 5px 0px 5px 25px;
+}
+
+.project-category{
+    color: #9c0034;
+}
+
+.project-title{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.project-technologies{
+    color: #aa0294;
+}
+
+.project-description{
+    color: #3f3a3a;
+    text-align: center;
 }

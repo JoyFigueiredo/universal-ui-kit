@@ -15,10 +15,14 @@ export class ProjectComponent {
   @Input() title!: string;
   @Input() description!: string;
   @Input() image!: string;
-  @Input() link!: string;
+
+  @Input() category!: string;
+  @Input() technologies: string[] = [];
+
+  @Input() github!: string;
 
   verProjeto() {
-    window.open(this.link, '_blank');
+    window.open(this.github, '_blank');
   }
 
 }

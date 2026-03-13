@@ -29,14 +29,24 @@
             <img src="images/joice.png" alt="Banner do Universal UI" />
         </div>
     </section>
+
     <section id="menu">
-        <h2 class="section-title"> Projetos </h2>
+        <h2 class="section-title">Projetos</h2>
         <h3 class="section-subtitle">Veja alguns dos meus trabalhos</h3>
 
         <div id="projects">
-            <app-project *ngFor="let project of projects" [title]="project.title" [description]="project.description"
-                [image]="project.image" [link]="project.link">
+            <app-project
+                *ngFor="let project of projects"
+                [title]="project.title"
+                [description]="project.description"
+                [image]="project.image"
+                [category]="project.category"
+                [technologies]="project.technologies"
+                [github]="project.github">
             </app-project>
+
         </div>
     </section>
+
+
 </main>

@@ -2,11 +2,12 @@
     display: flex;
     min-height: calc(100vh - 70px);
     position: relative;
-    
+    margin-top: 50px;
 }
 
-section {
+.section {
     padding: 28px 8%;
+    align-items: center;
 }
 
 #cta {
@@ -15,12 +16,15 @@ section {
     flex-direction: column;
     gap: 28px;
     margin-top: 50px;
+    align-items: center;
 }
 
 #cta .title {
     font-size: 3rem;
     font-weight: bold;
     color: #000000;
+    text-align: center;
+
 }
 
 #cta .title span {
@@ -32,6 +36,7 @@ section {
 #cta .description {
     font-size: 1.2rem;
     color: #333333;
+    text-align: center;
 }
 
 #cta_buttons {
@@ -45,7 +50,7 @@ section {
 }
 
 #banner {
-    
+
     display: flex;
     align-items: start;
     justify-content: end;
@@ -74,26 +79,35 @@ section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
+    padding: 60px 8%;
 }
 
-#projects{
+#projects {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 24px;
+    max-width: 1200px;
     margin-top: 32px;
+
+    display: grid;
+
+    /* GRID RESPONSIVO AUTOMÁTICO */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 24px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.section-title{
-    color: #a02252;  
+.section-title {
+    color: #a02252;
     font-size: 1.563rem;
 }
 
-.section-subtitle{
+.section-subtitle {
     font-size: 2.187rem;
 }
+
+
 
 @media screen and (max-width: 1200px) {
     #home {

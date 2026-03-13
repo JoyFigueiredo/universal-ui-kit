@@ -19,3 +19,11 @@ body {
 * {
   font-family: 'Sora', sans-serif;
 }
+
+:root {
+  --primary-color: #a02252;
+  --secondary-color: #b394a0;
+  --text-color: #333333;
+  --button-primary-color: #615f5f;
+  --button-primary-hover-color: #979696;
+}
