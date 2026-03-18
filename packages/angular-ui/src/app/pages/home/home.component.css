@@ -2,7 +2,7 @@
     display: flex;
     position: relative;
     align-items: center;
-    padding: 0 8%;
+    padding: 0 12%;
     justify-content: center;
 }
 
@@ -113,23 +113,28 @@ section {
 
     margin-left: auto;
     margin-right: auto;
+
+    text-align: center;
 }
 
 .section-title {
     color: #a02252;
     font-size: 1.563rem;
+
+    text-align: center;
 }
 
 .section-subtitle {
     font-size: 2.187rem;
+
+    text-align: center;
 }
 
-
-
-@media screen and (max-width: 1200px) {
+/* tablet */
+@media (max-width: 768px) {
     #home {
         min-height: 100%;
-        padding-top: 0px;
+        padding: 0 4%;
 
     }
 
@@ -152,5 +157,88 @@ section {
 
     .section {
         height: auto;
+    }
+}
+
+/* notebook */
+@media (max-width: 1024px) {
+    #home {
+        min-height: 100%;
+        padding: 0 6%;
+
+    }
+
+    #banner,
+    #banner img,
+    #home .shape {
+        display: none;
+    }
+
+
+    #cta {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    #content {
+        scroll-snap-type: none;
+    }
+
+    .section {
+        height: auto;
+    }
+}
+
+/* desktop */
+@media (max-width: 1400px) {
+    #home {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 0 6%;
+    text-align: center;
+    }
+
+    #cta {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    #content {
+        scroll-snap-type: none;
+    }
+
+    .section {
+        height: auto;
+    }
+
+    #banner {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #banner img {
+        max-width: 400px;
+    }
+
+}
+
+/* telas muito grandes */
+@media (max-width: 1600px) {
+    #home {
+        padding: 0 12%;
+    }
+
+    #cta .title {
+        font-size: 4rem;
+    }
+
+    #projects {
+        max-width: 1400px;
     }
 }
