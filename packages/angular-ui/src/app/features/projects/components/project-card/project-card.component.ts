@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ButtonComponent } from '../../components/button/button.component';
+import { ButtonComponent } from '../../../../components/button/button.component';
 
 @Component({
   selector: 'app-project',
   standalone: true,
   imports: [CommonModule, RouterModule, ButtonComponent],
-  templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  templateUrl: './project-card.component.html',
+  styleUrls: ['./project-card.component.css']
 })
 export class ProjectComponent {
 

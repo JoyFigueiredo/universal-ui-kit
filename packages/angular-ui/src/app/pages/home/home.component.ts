@@ -1,9 +1,9 @@
 import { Component, HostListener } from '@angular/core';
 import { ButtonComponent } from '../../components/button/button.component';
 import { SocialMediaComponent } from '../../components/social-media/social-media.component';
-import { ProjectService } from '../../services/project';
-import { ProjectComponent } from '../project/project.component';
-import { Project } from '../../models/project.model';
+import { ProjectService } from '../../features/projects/services/project.service';
+import { ProjectComponent } from '../../features/projects/components/project-card/project-card.component';
+import { Project } from '../../features/projects/models/project.model';
 import { CommonModule } from '@angular/common';
 
 
