@@ -20,8 +20,9 @@ jobs:
           cache: 'npm'
 
       - name: Install Dependencies
-        run:    cd packages/angular-ui 
-                npm install
+        run: |
+            cd packages/angular-ui 
+            npm install
 
       - name: Build Angular App
         run: |
