@@ -1,0 +1,45 @@
+name: Build and Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Angular App
+        run: |
+          cd packages/angular-ui
+          npm run build -- --configuration production --base-href /
+
+      - name: Post Build - 404 Trick
+        # Ajustado para incluir a pasta /browser
+        run: |
+          cp packages/angular-ui/dist/angular-ui/browser/index.html packages/angular-ui/dist/angular-ui/browser/404.html
+
+      - name: Push to Portfolio Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GH_PAT }}
+        with:
+          # O segredo está aqui: apontar diretamente para a pasta /browser
+          source-directory: 'packages/angular-ui/dist/angular-ui/browser'
+          destination-github-username: 'JoyFigueiredo'
+          destination-repository-name: 'JoyFigueiredo.github.io'
+          user-email: ${{ github.actor }}@users.noreply.github.com
+          target-branch: main
