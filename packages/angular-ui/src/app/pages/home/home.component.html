@@ -1,11 +1,20 @@
 <main id="content">
-    <section id="home" >
+    <section id="home">
 
         <div id="cta">
             <h1 class="title">
-                Olá, seja bem-vindo ao
-                <span>Portifólio</span>
+                Joice <span>Figueiredo</span>
             </h1>
+
+            <h2 class="subtitle">
+                Engenheira da Computação &
+                Desenvolvedora Front-end
+            </h2>
+
+            <p class="description">
+                Transformo ideias em experiências digitais,
+                unindo tecnologia, design, automação e criatividade.
+            </p>
             <p class="description">
                 Este é o meu portifólio pessoal, onde compartilho meus projetos, habilidades e experiências. Aqui você
                 encontrará uma variedade de trabalhos que refletem minha paixão por design, desenvolvimento e inovação.
@@ -14,39 +23,82 @@
 
             <div id="cta_buttons">
 
-                <ui-button label="Saiba Mais" variant="secondary" (action)="saibaMais()">
+                <ui-button
+                    label="Ver Projetos"
+                    variant="primary"
+                    icon="fa-solid fa-arrow-right"
+                    (action)="saibaMais()">
                 </ui-button>
 
-                <ui-button label="Contato" variant="secondary" icon="fa-solid fa-envelope" (action)="enviarEmail()">
+                <ui-button
+                    label="Baixar Currículo"
+                    variant="secondary"
+                    icon="fa-solid fa-download"
+                    (action)="baixarCurriculo()">
                 </ui-button>
 
             </div>
 
-            <ui-social-media></ui-social-media>
+        <ui-social-media></ui-social-media>
         </div>
         <div class="shape"></div>
         <div id="banner">
-            <img src="images/joice.png" alt="Banner do Universal UI" />
+
+            <div class="hero-glow"></div>
+
+            <div class="hero-circle"></div>
+
+            <img
+                src="images/joice.png"
+                alt="Joice Figueiredo" />
+
         </div>
     </section>
 
-    <section id="menu">
+    <!-- ABOUT SECTION -->
+    <app-about></app-about>
+
+    <app-skills></app-skills>
+
+    <section id="projects">
         <h2 class="section-title">Projetos</h2>
         <h3 class="section-subtitle">Veja alguns dos meus trabalhos</h3>
 
-        <div id="projects">
-            <app-project
-                *ngFor="let project of projects"
-                [title]="project.title"
-                [description]="project.description"
-                [image]="project.image"
-                [category]="project.category"
-                [technologies]="project.technologies"
-                [github]="project.github">
-            </app-project>
+        <div class="projects-wrapper">
+
+            <button
+                class="carousel-button left"
+                (click)="scrollProjects('left')">
+
+                <i class="fa-solid fa-chevron-left"></i>
+
+            </button>
+
+            <div id="projects-carousel">
+
+                <app-project
+                    *ngFor="let project of projects"
+                    [title]="project.title"
+                    [description]="project.description"
+                    [image]="project.image"
+                    [category]="project.category"
+                    [technologies]="project.technologies"
+                    [github]="project.github">
+                </app-project>
+
+            </div>
+
+            <button
+                class="carousel-button right"
+                (click)="scrollProjects('right')">
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
 
         </div>
     </section>
 
+    <app-contact></app-contact>
 
 </main>

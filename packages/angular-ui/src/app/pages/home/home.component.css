@@ -1,16 +1,180 @@
 #home {
-    display: flex;
-    position: relative;
-    align-items: center;
-    padding: 0 12%;
-    justify-content: center;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8%;
+
+  position: relative;
+
+  overflow: hidden;
 }
 
+#cta {
+  width: 50%;
+
+  z-index: 2;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  margin-bottom: 16px;
+}
+
+.title span {
+  color: var(--purple-primary);
+
+  text-shadow:
+    0 0 20px rgba(124, 58, 237, 0.5);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+
+  color: #d4d4d8;
+
+  margin-bottom: 24px;
+
+  font-weight: 400;
+}
+
+.description {
+  font-size: 1.1rem;
+
+  line-height: 1.8;
+
+  color: var(--text-secondary);
+
+  max-width: 600px;
+
+  margin-bottom: 40px;
+}
+
+#banner {
+  width: 45%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.hero-circle {
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(124,58,237,0.35),
+      rgba(124,58,237,0.08),
+      transparent 70%
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(10px);
+
+  animation:
+    pulseCircle 6s ease-in-out infinite;
+
+  z-index: 0;
+}
+
+.hero-glow {
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(124,58,237,0.25),
+      transparent 70%
+    );
+
+  filter: blur(80px);
+
+  z-index: 0;
+}
+
+#banner img {
+  width: 100%;
+  max-width: 460px;
+
+  position: relative;
+  z-index: 2;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 30px rgba(124,58,237,0.35));
+
+  animation:
+    floatImage 5s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+
+  0%,100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+}
+
+@keyframes pulseCircle {
+
+  0%,100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+}
+
+.shape {
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  background:
+    radial-gradient(circle,
+      rgba(124, 58, 237, 0.12),
+      transparent 70%);
+
+  top: -200px;
+  right: -200px;
+
+  filter: blur(40px);
+
+  z-index: 0;
+}
 
 section {
-    min-height: 100vh;
-    width: 100%;
-    transition: opacity 0.6s ease, transform 0.6s ease;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .section {
@@ -18,48 +182,11 @@ section {
     align-items: center;
 }
 
-#content {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-}
-
-#cta {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-top: 0px;
-    align-items: center;
-    z-index: 2;
-    position: relative;
-    justify-content: center;
-}
-
-
-#cta .title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #000000;
-    text-align: center;
-
-}
-
-#cta .title span {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #a02252;
-}
-
-#cta .description {
-    font-size: 1.2rem;
-    color: #333333;
-    text-align: center;
-}
-
 #cta_buttons {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 20px;
+
+  margin-bottom: 32px;
 }
 
 #cta_buttons a {
@@ -67,178 +194,209 @@ section {
     color: #a02252;
 }
 
-#banner {
-
-    display: flex;
-    align-items: start;
-    justify-content: end;
-    width: 65%;
-    z-index: 2;
-}
-
-#banner img {
-    max-width: 500px;
-    width: fit-content;
-    height: auto;
-}
-
-.shape {
-    background-color: #b394a0;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    border-radius: 40% 30% 0% 20%;
-    top: 0;
-    right: 0;
-    z-index: 0;
-}
-
-#menu {
-    height: 100vh;
-    padding: 60px 8%;
-    padding-top: 80px;
-}
 
 #projects {
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 32px;
+  padding: 120px 8%;
+}
 
-    display: grid;
+#projects-carousel {
+  display: flex;
 
-    /* GRID RESPONSIVO AUTOMÁTICO */
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
 
-    gap: 24px;
+  overflow-x: auto;
 
-    margin-left: auto;
-    margin-right: auto;
+  padding: 20px 20px 40px;
 
-    text-align: center;
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+
+  width: 100%;
+}
+
+#projects-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.carousel-button {
+  position: absolute;
+
+  z-index: 10;
+
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(20,20,30,0.7);
+
+  backdrop-filter: blur(12px);
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-button:hover {
+  transform: scale(1.08);
+
+  background: rgba(124,58,237,0.2);
+
+  border-color: rgba(124,58,237,0.4);
+}
+
+.carousel-button.left {
+  left: -10px;
+}
+
+.carousel-button.right {
+  right: -10px;
+}
+
+.carousel-button i {
+  font-size: 1rem;
 }
 
 .section-title {
-    color: #a02252;
-    font-size: 1.563rem;
+  color: var(--purple-primary);
 
-    text-align: center;
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 16px;
+
+  text-align: center;
 }
 
 .section-subtitle {
-    font-size: 2.187rem;
+  font-size: 3rem;
 
-    text-align: center;
+  font-weight: 700;
+
+  text-align: center;
+
+  margin-bottom: 60px;
 }
 
-/* tablet */
+.reveal {
+  opacity: 0;
+
+  transform:
+    translateY(60px);
+
+  transition:
+    all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+/* RESPONSIVE DESIGN */
+/* Estilos para telas menores que 768px (tablets e smartphones) */
 @media (max-width: 768px) {
-    #home {
-        min-height: 100%;
-        padding: 0 4%;
 
-    }
+  #home {
+    flex-direction: column;
+    justify-content: center;
 
-    #banner,
-    #banner img,
-    #home .shape {
-        display: none;
-    }
+    padding: 120px 24px 80px;
 
-    #cta {
-        width: 100%;
-        text-align: center;
-        align-items: center;
-        margin-top: 0px;
-    }
-
-    #content {
-        scroll-snap-type: none;
-    }
-
-    .section {
-        height: auto;
-    }
-}
-
-/* notebook */
-@media (max-width: 1024px) {
-    #home {
-        min-height: 100%;
-        padding: 0 6%;
-
-    }
-
-    #banner,
-    #banner img,
-    #home .shape {
-        display: none;
-    }
-
-
-    #cta {
-        width: 100%;
-        text-align: center;
-        align-items: center;
-        margin-top: 0px;
-    }
-
-    #content {
-        scroll-snap-type: none;
-    }
-
-    .section {
-        height: auto;
-    }
-}
-
-/* desktop */
-@media (max-width: 1400px) {
-    #home {
-        display: flex;
-        justify-content: center;
-        gap: 50px;
-        padding: 0 6%;
     text-align: center;
-    }
+  }
 
-    #cta {
-        width: 100%;
-        text-align: center;
-        align-items: center;
-        margin-top: 0px;
-    }
+  #cta {
+    width: 100%;
+  }
 
-    #content {
-        scroll-snap-type: none;
-    }
+  .title {
+    font-size: 3rem;
+  }
 
-    .section {
-        height: auto;
-    }
+  .subtitle {
+    font-size: 1.2rem;
+  }
 
-    #banner {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
+  .description {
+    font-size: 1rem;
+  }
 
-    #banner img {
-        max-width: 400px;
-    }
+  #cta_buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
+  #banner {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  #banner img {
+    max-width: 320px;
+  }
+
+  .shape {
+    display: none;
+  }
+
+  .carousel-button {
+    display: none;
+  }
 }
 
-/* telas muito grandes */
-@media (max-width: 1600px) {
-    #home {
-        padding: 0 12%;
-    }
+/* Estilos para telas entre 769px e 1200px (laptops e desktops menores) */
+@media (min-width: 769px) and (max-width: 1200px) {
 
-    #cta .title {
-        font-size: 4rem;
-    }
+  #home {
+    padding: 120px 6%;
+    gap: 40px;
+  }
 
-    #projects {
-        max-width: 1400px;
-    }
+  .title {
+    font-size: 4rem;
+  }
+
+  #banner img {
+    max-width: 400px;
+  }
+}
+
+/* Estilos para telas maiores que 1600px (desktops grandes) */
+@media (min-width: 1600px) {
+
+  #home {
+    padding: 0 12%;
+  }
+
+  .title {
+    font-size: 6rem;
+  }
 }

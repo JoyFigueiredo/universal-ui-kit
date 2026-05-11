@@ -1,25 +1,53 @@
-<div class="project">
-    <img [src]="image" class="project-image" />
+<div class="project-card">
 
-    <span class="project-category">
-        {{ category }}
-    </span>
+    <div class="project-image-wrapper">
 
-    <h3 class="project-title">
-        {{ title }}
-    </h3>
+        <img
+            [src]="image"
+            class="project-image"
+            [alt]="title"
+        />
 
-    <div class="project-technologies">
-        <span *ngFor="let tech of technologies">
-            {{ tech }}
-        </span>
+        <div class="image-overlay"></div>
+
     </div>
 
-    <p class="project-description">
-        {{ description }}
-    </p>
+    <div class="project-content">
 
-    <ui-button label="GitHub" icon="fa-brands fa-github" (action)="verProjeto()">
-    </ui-button>
+        <span class="project-category">
+            {{ category }}
+        </span>
+
+        <h3 class="project-title">
+            {{ title }}
+        </h3>
+
+        <p class="project-description">
+            {{ description }}
+        </p>
+
+        <div class="project-technologies">
+
+            <span
+                *ngFor="let tech of technologies"
+                class="tech-tag"
+            >
+                {{ tech }}
+            </span>
+
+        </div>
+
+        <div class="project-footer">
+
+            <ui-button
+                label="Ver Projeto"
+                variant="secondary"
+                icon="fa-brands fa-github"
+                (action)="verProjeto()">
+            </ui-button>
+
+        </div>
+
+    </div>
 
 </div>

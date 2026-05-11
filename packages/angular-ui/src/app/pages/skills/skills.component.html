@@ -1,0 +1,41 @@
+<section id="skills" class="skills-section reveal">
+
+    <div class="skills-container">
+
+        <div class="skills-header">
+
+            <h2 class="skills-title">
+                Tecnologias & Ferramentas
+            </h2>
+
+            <button
+                class="skills-toggle"
+                (click)="toggleSkills()">
+
+                {{ expanded ? 'Ver menos' : 'Ver mais' }}
+
+            </button>
+
+        </div>
+
+        <div
+            class="skills-wrapper"
+            [class.expanded]="expanded">
+
+            <div
+                class="skill-card"
+                *ngFor="let skill of skills">
+
+                <i [class]="skill.icon"></i>
+
+                <span>
+                    {{ skill.name }}
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

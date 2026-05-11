@@ -1,10 +1,35 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css'],
+  styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {}
+export class ContactComponent {
+
+  nome = '';
+  email = '';
+  assunto = '';
+  mensagem = '';
+
+  enviarMensagem() {
+
+    const body =
+`Olá, Joice!
+
+Nome: ${this.nome}
+Email: ${this.email}
+
+${this.mensagem}`;
+
+    const mail =
+`mailto:joicebfigueiredo@gmail.com?subject=${encodeURIComponent(this.assunto)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mail;
+  }
+
+}
