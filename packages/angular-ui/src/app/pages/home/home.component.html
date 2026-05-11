@@ -2,6 +2,9 @@
     <section id="home">
 
         <div id="cta">
+            <span class="intro-text">
+                Oi, eu sou
+            </span>
             <h1 class="title">
                 Joice <span>Figueiredo</span>
             </h1>
@@ -23,23 +26,16 @@
 
             <div id="cta_buttons">
 
-                <ui-button
-                    label="Ver Projetos"
-                    variant="primary"
-                    icon="fa-solid fa-arrow-right"
-                    (action)="saibaMais()">
+                <ui-button label="Ver Projetos" variant="primary" icon="fa-solid fa-arrow-right" (action)="saibaMais()">
                 </ui-button>
 
-                <ui-button
-                    label="Baixar Currículo"
-                    variant="secondary"
-                    icon="fa-solid fa-download"
+                <ui-button label="Baixar Currículo" variant="secondary" icon="fa-solid fa-download"
                     (action)="baixarCurriculo()">
                 </ui-button>
 
             </div>
 
-        <ui-social-media></ui-social-media>
+            <ui-social-media></ui-social-media>
         </div>
         <div class="shape"></div>
         <div id="banner">
@@ -48,9 +44,7 @@
 
             <div class="hero-circle"></div>
 
-            <img
-                src="images/joice.png"
-                alt="Joice Figueiredo" />
+            <img src="images/joice.png" alt="Joice Figueiredo" />
 
         </div>
     </section>
@@ -66,9 +60,7 @@
 
         <div class="projects-wrapper">
 
-            <button
-                class="carousel-button left"
-                (click)="scrollProjects('left')">
+            <button class="carousel-button left" (click)="scrollProjects('left')">
 
                 <i class="fa-solid fa-chevron-left"></i>
 
@@ -76,21 +68,14 @@
 
             <div id="projects-carousel">
 
-                <app-project
-                    *ngFor="let project of projects"
-                    [title]="project.title"
-                    [description]="project.description"
-                    [image]="project.image"
-                    [category]="project.category"
-                    [technologies]="project.technologies"
-                    [github]="project.github">
+                <app-project *ngFor="let project of projects" [title]="project.title"
+                    [description]="project.description" [image]="project.image" [category]="project.category"
+                    [technologies]="project.technologies" [github]="project.github">
                 </app-project>
 
             </div>
 
-            <button
-                class="carousel-button right"
-                (click)="scrollProjects('right')">
+            <button class="carousel-button right" (click)="scrollProjects('right')">
 
                 <i class="fa-solid fa-chevron-right"></i>
 
