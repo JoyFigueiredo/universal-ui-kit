@@ -44,7 +44,7 @@ export class HomeComponent implements AfterViewInit {
   saibaMais() {
 
     document
-      .getElementById('menu')
+      .getElementById('projects')
       ?.scrollIntoView({
         behavior: 'smooth'
       });

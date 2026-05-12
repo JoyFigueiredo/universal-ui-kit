@@ -13,18 +13,19 @@ export class ProjectService {
       title: '2048 Game',
 
       description:
-        'Versão gráfica do clássico jogo 2048 desenvolvida em C utilizando Allegro 5. Projeto focado em lógica de movimentação baseada em matrizes, renderização gráfica, manipulação de eventos, áudio e estruturação de sistemas em baixo nível.',
+        'Versão gráfica do clássico jogo 2048 desenvolvida em C utilizando Allegro 5.',
 
-      image: 'images/projetos/2048/jogo.png',
+      images: [
+        'images/projetos/2048/jogo.png',
+        'images/projetos/2048/Vitoria.png'
+      ],
 
       category: 'Game Development',
 
       technologies: [
         'C',
         'Allegro 5',
-        'Game Logic',
-        'Matrix Manipulation',
-        'Audio System'
+        'Game Logic'
       ],
 
       github:
@@ -38,32 +39,32 @@ export class ProjectService {
     },
 
     {
-  title: 'Automatic Pet Feeder',
+      title: 'Automatic Pet Feeder',
 
-  description:
-    'Sistema embarcado desenvolvido como Trabalho de Conclusão de Curso (TCC) para automação da alimentação de pets, com controle de horários, porções e acionamento automatizado. O projeto integra hardware, eletrônica, microcontroladores e lógica de automação.',
+      description:
+        'Sistema embarcado desenvolvido como Trabalho de Conclusão de Curso (TCC) para automação da alimentação de pets, com controle de horários, porções e acionamento automatizado. O projeto integra hardware, eletrônica, microcontroladores e lógica de automação.',
 
-  image: 'images/projetos/TCC/Inicio.png',
+      images: ['images/projetos/TCC/Inicio.png'],
 
-  category: 'Embedded Systems',
+      category: 'Embedded Systems',
 
-  technologies: [
-    'Arduino',
-    'C++',
-    'Embedded Systems',
-    'Electronics',
-    'Automation'
-  ],
+      technologies: [
+        'Arduino',
+        'C++',
+        'Embedded Systems',
+        'Electronics',
+        'Automation'
+      ],
 
-  github:
-    'https://github.com/JoyFigueiredo/AlimentadorDePet',
+      github:
+        'https://github.com/JoyFigueiredo/AlimentadorDePet',
 
-  featured: true,
+      featured: true,
 
-  year: '2026',
+      year: '2026',
 
-  status: 'Concluído'
-},
+      status: 'Concluído'
+    },
 
     {
       title: 'Sistema de Alimentação Pet',
@@ -71,7 +72,7 @@ export class ProjectService {
       description:
         'Projeto de automação residencial utilizando hardware e software para alimentação automatizada de pets.',
 
-      image: 'images/projetos/exemplo.png',
+      images: ['images/projetos/exemplo.png'],
 
       category: 'IoT',
 
@@ -96,7 +97,7 @@ export class ProjectService {
       description:
         'Marca criativa unindo impressão 3D, crochê, design artesanal e identidade visual moderna.',
 
-      image: 'images/projetos/exemplo.png',
+      images: ['images/projetos/exemplo.png'],
 
       category: 'Creative Tech',
 
