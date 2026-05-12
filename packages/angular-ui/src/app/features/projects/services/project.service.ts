@@ -10,57 +10,60 @@ export class ProjectService {
   projects: Project[] = [
 
     {
-      title: 'Universal UI Kit',
+      title: '2048 Game',
 
       description:
-        'Biblioteca moderna de componentes reutilizáveis em Angular com foco em design system, acessibilidade e interfaces premium.',
+        'Versão gráfica do clássico jogo 2048 desenvolvida em C utilizando Allegro 5. Projeto focado em lógica de movimentação baseada em matrizes, renderização gráfica, manipulação de eventos, áudio e estruturação de sistemas em baixo nível.',
 
-      image: 'images/projetos/exemplo.png',
+      image: 'images/projetos/2048/jogo.png',
 
-      category: 'Front-end',
+      category: 'Game Development',
 
       technologies: [
-        'Angular',
-        'TypeScript',
-        'SCSS',
-        'UI Design'
+        'C',
+        'Allegro 5',
+        'Game Logic',
+        'Matrix Manipulation',
+        'Audio System'
       ],
 
       github:
-        'https://github.com/JoyFigueiredo/universal-ui-kit',
+        'https://github.com/JoyFigueiredo/Jogo2048',
 
       featured: true,
 
-      year: '2026',
+      year: '2022',
 
-      status: 'Em desenvolvimento'
+      status: 'Concluído'
     },
 
     {
-      title: 'Portfolio Premium',
+  title: 'Automatic Pet Feeder',
 
-      description:
-        'Portfolio moderno desenvolvido em Angular com foco em UI premium, animações suaves e experiência visual elegante.',
+  description:
+    'Sistema embarcado desenvolvido como Trabalho de Conclusão de Curso (TCC) para automação da alimentação de pets, com controle de horários, porções e acionamento automatizado. O projeto integra hardware, eletrônica, microcontroladores e lógica de automação.',
 
-      image: 'images/projetos/exemplo.png',
+  image: 'images/projetos/TCC/Inicio.png',
 
-      category: 'Web Design',
+  category: 'Embedded Systems',
 
-      technologies: [
-        'Angular',
-        'CSS',
-        'Responsive Design'
-      ],
+  technologies: [
+    'Arduino',
+    'C++',
+    'Embedded Systems',
+    'Electronics',
+    'Automation'
+  ],
 
-      github:
-        'https://github.com/JoyFigueiredo',
+  github:
+    'https://github.com/JoyFigueiredo/AlimentadorDePet',
 
-      featured: true,
+  featured: true,
 
-      year: '2026',
+  year: '2026',
 
-      status: 'Online'
-    },
+  status: 'Concluído'
+},
 
     {
       title: 'Sistema de Alimentação Pet',

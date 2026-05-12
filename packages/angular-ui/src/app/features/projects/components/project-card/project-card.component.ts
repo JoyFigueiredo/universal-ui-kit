@@ -25,4 +25,10 @@ export class ProjectComponent {
     window.open(this.github, '_blank');
   }
 
+  expanded = false;
+
+  toggleExpand() {
+    this.expanded = !this.expanded;
+  }
+
 }

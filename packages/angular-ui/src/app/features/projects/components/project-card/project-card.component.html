@@ -1,12 +1,8 @@
-<div class="project-card">
+<div class="project-card" [class.expanded]="expanded" (click)="toggleExpand()">
 
     <div class="project-image-wrapper">
 
-        <img
-            [src]="image"
-            class="project-image"
-            [alt]="title"
-        />
+        <img [src]="image" class="project-image" [alt]="title" />
 
         <div class="image-overlay"></div>
 
@@ -26,24 +22,21 @@
             {{ description }}
         </p>
 
+        <span class="expand-text">
+            {{ expanded ? 'Ver menos' : 'Ver mais' }}
+        </span>
+
         <div class="project-technologies">
 
-            <span
-                *ngFor="let tech of technologies"
-                class="tech-tag"
-            >
+            <span *ngFor="let tech of technologies" class="tech-tag">
                 {{ tech }}
             </span>
 
         </div>
 
-        <div class="project-footer">
+        <div class="project-footer" (click)="$event.stopPropagation()">
 
-            <ui-button
-                label="Ver Projeto"
-                variant="secondary"
-                icon="fa-brands fa-github"
-                (action)="verProjeto()">
+            <ui-button label="Ver Projeto" variant="secondary" icon="fa-brands fa-github" (action)="verProjeto()">
             </ui-button>
 
         </div>
