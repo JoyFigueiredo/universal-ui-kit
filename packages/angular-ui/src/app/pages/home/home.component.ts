@@ -51,6 +51,7 @@ export class HomeComponent implements AfterViewInit {
 
   }
 
+  
   baixarCurriculo() {
 
     window.open(
