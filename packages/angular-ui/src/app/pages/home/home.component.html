@@ -1,93 +1,108 @@
 <main id="content">
-    <section id="home">
+  <section id="home">
 
-        <div id="cta">
-            <span class="intro-text">
-                Oi, eu sou a
-            </span>
-            <h1 class="title">
-                Joice <span>Figueiredo</span>
-            </h1>
+    <div id="cta">
+      <span class="intro-text">
+        Oi, eu sou a
+      </span>
+      <h1 class="title">
+        Joice <span>Figueiredo</span>
+      </h1>
 
-            <h2 class="subtitle">
-                Engenheira da Computação &
-                Desenvolvedora Front-end
-            </h2>
+      <h2 class="subtitle">
+        Engenheira de Computação | Fullstack & Automação
+      </h2>
 
-            <p class="description">
-                Gosto de criar soluções que unem tecnologia,
-                design e criatividade para transformar ideias
-                em projetos reais.
-            </p>
-            <p class="description">
-                Sou Engenheira da Computação apaixonada por
-                desenvolvimento front-end, automação, eletrônica,
-                impressão 3D e experiências digitais.
-                Aqui você vai encontrar projetos que mostram
-                um pouco da minha trajetória, das minhas habilidades
-                e das coisas que adoro construir.
-            </p>
+      <div class="language-badges">
 
-            <div id="cta_buttons">
+        <span class="lang-badge english">
+          <i class="fa-solid fa-language"></i>
+          Inglês • Avançado
+        </span>
 
-                <ui-button label="Ver Projetos" variant="primary" icon="fa-solid fa-arrow-right" (action)="saibaMais()">
-                </ui-button>
+        <span class="lang-badge spanish">
+          <i class="fa-solid fa-language"></i>
+          Espanhol • Intermediário
+        </span>
 
-                <ui-button label="Baixar Currículo" variant="secondary" icon="fa-solid fa-download"
-                    (action)="baixarCurriculo()">
-                </ui-button>
+      </div>
 
-            </div>
 
-            <ui-social-media></ui-social-media>
-        </div>
-        <div class="shape"></div>
-        <div id="banner">
+      <p class="description">
 
-            <div class="hero-glow"></div>
+        Gosto de criar soluções que unem tecnologia,
+        design e criatividade para transformar ideias
+        em projetos reais.
+      </p>
+      <p class="description">
+        Sou Engenheira da Computação apaixonada por
+        desenvolvimento front-end, automação, eletrônica,
+        impressão 3D e experiências digitais.
+        Aqui você vai encontrar projetos que mostram
+        um pouco da minha trajetória, das minhas habilidades
+        e das coisas que adoro construir.
+      </p>
 
-            <div class="hero-circle"></div>
+      <div id="cta_buttons">
 
-            <img src="images/joice.png" alt="Joice Figueiredo" />
+        <ui-button label="Ver Projetos" variant="primary" icon="fa-solid fa-arrow-right" (action)="saibaMais()">
+        </ui-button>
 
-        </div>
-    </section>
+        <ui-button label="Baixar Currículo" variant="secondary" icon="fa-solid fa-download"
+          (action)="baixarCurriculo()">
+        </ui-button>
 
-    <!-- ABOUT SECTION -->
-    <app-about></app-about>
+      </div>
 
-    <app-skills></app-skills>
+      <ui-social-media></ui-social-media>
+    </div>
+    <div class="shape"></div>
+    <div id="banner">
 
-    <section id="projects">
-        <h2 class="section-title">Projetos</h2>
-        <h3 class="section-subtitle">Veja alguns dos meus trabalhos</h3>
+      <div class="hero-glow"></div>
 
-        <div class="projects-wrapper">
+      <div class="hero-circle"></div>
 
-            <button class="carousel-button left" (click)="scrollProjects('left')">
+      <img src="images/joice.png" alt="Joice Figueiredo" />
 
-                <i class="fa-solid fa-chevron-left"></i>
+    </div>
+  </section>
 
-            </button>
+  <!-- ABOUT SECTION -->
+  <app-about></app-about>
 
-            <div id="projects-carousel">
+  <app-skills></app-skills>
 
-                <app-project *ngFor="let project of projects" [title]="project.title"
-                    [description]="project.description" [images]="project.images" [category]="project.category"
-                    [technologies]="project.technologies" [github]="project.github">
-                </app-project>
+  <section id="projects">
+    <h2 class="section-title">Projetos</h2>
+    <h3 class="section-subtitle">Veja alguns dos meus trabalhos</h3>
 
-            </div>
+    <div class="projects-wrapper">
 
-            <button class="carousel-button right" (click)="scrollProjects('right')">
+      <button class="carousel-button left" (click)="scrollProjects('left')">
 
-                <i class="fa-solid fa-chevron-right"></i>
+        <i class="fa-solid fa-chevron-left"></i>
 
-            </button>
+      </button>
 
-        </div>
-    </section>
+      <div id="projects-carousel">
 
-    <app-contact></app-contact>
+        <app-project *ngFor="let project of projects" [title]="project.title" [description]="project.description"
+          [images]="project.images" [category]="project.category" [technologies]="project.technologies"
+          [github]="project.github">
+        </app-project>
+
+      </div>
+
+      <button class="carousel-button right" (click)="scrollProjects('right')">
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+      </button>
+
+    </div>
+  </section>
+
+  <app-contact></app-contact>
 
 </main>
