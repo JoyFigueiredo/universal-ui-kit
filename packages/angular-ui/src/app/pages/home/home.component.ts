@@ -54,7 +54,7 @@ export class HomeComponent implements AfterViewInit {
   baixarCurriculo() {
 
     window.open(
-      'files/curriculo.pdf',
+      'files/Curriculum_Joice_Barros_Figueiredo.pdf',
       '_blank'
     );
 
