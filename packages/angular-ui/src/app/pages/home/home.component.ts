@@ -7,6 +7,7 @@ import { SocialMediaComponent } from '../../components/social-media/social-media
 import { AboutComponent } from '../about/about.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { ContactComponent } from '../contact/contact.component';
+import { TCCComponent } from '../TCC/tcc.component';
 
 import { ProjectComponent } from '../../features/projects/components/project-card/project-card.component';
 
@@ -24,6 +25,7 @@ import { Project } from '../../features/projects/models/project.model';
     AboutComponent,
     SkillsComponent,
     ContactComponent,
+    TCCComponent,
     ProjectComponent
   ],
 

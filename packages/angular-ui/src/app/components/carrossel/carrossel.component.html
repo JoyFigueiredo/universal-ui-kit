@@ -1,0 +1,40 @@
+<div class="carrossel-container">
+
+  <button
+    class="image-nav left"
+    *ngIf="images.length > 1"
+    (click)="prevImage($event)"
+  >
+    ❮
+  </button>
+
+  <div class="image-wrapper">
+
+    <img
+      [src]="images[currentImage]"
+      class="carrossel-image"
+      [alt]="title"
+    />
+
+    <div class="image-overlay"></div>
+
+  </div>
+
+  <button
+    class="image-nav right"
+    *ngIf="images.length > 1"
+    (click)="nextImage($event)"
+  >
+    ❯
+  </button>
+
+  <div class="image-indicators">
+    <span
+      *ngFor="let image of images; let i = index"
+      [class.active]="i === currentImage"
+      (click)="currentImage = i"
+    >
+    </span>
+  </div>
+
+</div>
