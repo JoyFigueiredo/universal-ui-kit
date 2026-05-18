@@ -9,10 +9,9 @@ import { SkillsComponent } from '../skills/skills.component';
 import { ContactComponent } from '../contact/contact.component';
 import { TCCComponent } from '../TCC/tcc.component';
 
+import { ProjectsComponent } from '../project/projects.component';
 import { ProjectComponent } from '../../features/projects/components/project-card/project-card.component';
 
-import { ProjectService } from '../../features/projects/services/project.service';
-import { Project } from '../../features/projects/models/project.model';
 
 @Component({
   selector: 'app-home',
@@ -25,6 +24,7 @@ import { Project } from '../../features/projects/models/project.model';
     AboutComponent,
     SkillsComponent,
     ContactComponent,
+
     TCCComponent,
     ProjectComponent
   ],
@@ -33,15 +33,6 @@ import { Project } from '../../features/projects/models/project.model';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements AfterViewInit {
-
-  projects: Project[] = [];
-
-  constructor(
-    private projectService: ProjectService
-  ) {
-    this.projects =
-      this.projectService.getProjects();
-  }
 
   saibaMais() {
 

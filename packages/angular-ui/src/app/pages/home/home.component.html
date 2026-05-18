@@ -52,6 +52,7 @@
           (action)="baixarCurriculo()">
         </ui-button>
 
+
       </div>
 
       <ui-social-media></ui-social-media>
@@ -68,6 +69,7 @@
     </div>
   </section>
 
+  
   <!-- ABOUT SECTION -->
   <app-about></app-about>
 
@@ -87,6 +89,19 @@
 
       </button>
 
+
+
+    </div>
+  </section>
+
+        <!-- Sobre -->
+      <app-about></app-about>
+      <!-- Skills -->
+      <app-skills></app-skills>
+
+      <!-- Projetos -->
+      <app-projects></app-projects>
+
       <div id="projects-carousel">
 
         <app-project *ngFor="let project of projects" [title]="project.title" [description]="project.description"
@@ -101,9 +116,6 @@
         <i class="fa-solid fa-chevron-right"></i>
 
       </button>
-
-    </div>
-  </section>
 
   <app-contact></app-contact>
 
