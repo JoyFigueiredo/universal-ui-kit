@@ -26,7 +26,7 @@ import { ProjectComponent } from '../../features/projects/components/project-car
     ContactComponent,
 
     TCCComponent,
-    ProjectComponent
+    ProjectsComponent
   ],
 
   templateUrl: './home.component.html',

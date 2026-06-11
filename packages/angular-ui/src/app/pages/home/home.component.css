@@ -14,13 +14,15 @@
 }
 
 .portfolio-status {
-  margin: 16px 0;
-  padding: 10px 15px;
-  border-radius: 8px;
-  background: rgba(255, 193, 7, 0.1);
-  border-left: 4px solid #ffc107;
-  font-size: 0.95rem;
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 193, 7, 0.12);
+  border: 1px solid rgba(255, 193, 7, 0.4);
+  font-size: 0.9rem;
   color: #666;
+  font-weight: 500;
 }
 
 #cta {
