@@ -13,6 +13,10 @@
         Engenheira de Computação | Fullstack & Automação
       </h2>
 
+      <div class="portfolio-status">
+        🚧 Portfólio em desenvolvimento — novos projetos e melhorias estão sendo adicionados continuamente.
+      </div>
+
       <div class="language-badges">
 
         <span class="lang-badge english">
@@ -69,7 +73,7 @@
     </div>
   </section>
 
-  
+
   <!-- ABOUT SECTION -->
   <app-about></app-about>
 
@@ -94,28 +98,28 @@
     </div>
   </section>
 
-        <!-- Sobre -->
-      <app-about></app-about>
-      <!-- Skills -->
-      <app-skills></app-skills>
+  <!-- Sobre -->
+  <app-about></app-about>
+  <!-- Skills -->
+  <app-skills></app-skills>
 
-      <!-- Projetos -->
-      <app-projects></app-projects>
+  <!-- Projetos -->
+  <app-projects></app-projects>
 
-      <div id="projects-carousel">
+  <div id="projects-carousel">
 
-        <app-project *ngFor="let project of projects" [title]="project.title" [description]="project.description"
-          [images]="project.images" [category]="project.category" [technologies]="project.technologies"
-          [github]="project.github">
-        </app-project>
+    <app-project *ngFor="let project of projects" [title]="project.title" [description]="project.description"
+      [images]="project.images" [category]="project.category" [technologies]="project.technologies"
+      [github]="project.github">
+    </app-project>
 
-      </div>
+  </div>
 
-      <button class="carousel-button right" (click)="scrollProjects('right')">
+  <button class="carousel-button right" (click)="scrollProjects('right')">
 
-        <i class="fa-solid fa-chevron-right"></i>
+    <i class="fa-solid fa-chevron-right"></i>
 
-      </button>
+  </button>
 
   <app-contact></app-contact>
 
