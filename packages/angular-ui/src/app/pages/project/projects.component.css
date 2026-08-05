@@ -108,3 +108,39 @@
 
   margin-bottom: 60px;
 }
+
+@media (max-width: 768px) {
+
+  .projects-wrapper {
+    padding: 0 12px;
+  }
+
+  #projects {
+    padding: 80px 16px;
+  }
+
+   #projects-carousel{
+
+        gap:20px;
+        padding:20px 0;
+
+    }
+
+    .carousel-button{
+        display:none;
+    }
+
+    #projects-carousel{
+
+        scroll-padding-left:16px;
+
+    }
+
+    .section-subtitle{
+
+        font-size:2rem;
+        margin-bottom:40px;
+
+    }
+
+}

@@ -275,25 +275,39 @@
 @media (max-width: 768px) {
 
     .project-image-wrapper {
-        height: 220px;
+        height: 180px;
     }
 
     .project-content {
-        padding: 24px;
+        padding: 18px;
     }
 
     .project-title {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .project-card {
-        min-width: calc(100vw - 48px);
-        max-width: calc(100vw - 48px);
+        min-width: 320px;
+        max-width: 320px;
     }
 
     .project-card.expanded {
         min-width: calc(100vw - 48px);
         max-width: calc(100vw - 48px);
+    }
+
+    .project-description {
+
+        line-height: 1.6;
+        max-height: 120px;
+
+    }
+
+    .tech-tag {
+
+        font-size: .75rem;
+        padding: 5px 10px;
+
     }
 
 }

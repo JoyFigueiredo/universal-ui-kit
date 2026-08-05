@@ -1,5 +1,25 @@
 .tcc-container{
-  display:flex;
-  gap:40px;
-  align-items:center;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.carrossel-wrapper{
+    padding: 0 30px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+
+    .tcc-container{
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 16px;
+    }
+
+    .info{
+        width:100%;
+        text-align:center;
+    }
+
 }
